@@ -25,7 +25,7 @@ public class ArrayQueueDemo {
                 case's':
                     queue.showQueue();
                 case'a':
-                    System.out.println("输出一个数");
+                    System.out.println("输入一个数");
                     int value = scanner.nextInt();
                     queue.addQueue(value);
                     break;
@@ -54,10 +54,8 @@ public class ArrayQueueDemo {
             }
         }
         System.out.println("程序退出");
-
     }
 }
-
 
 //使用数组模拟队列——编写一个ArrayQueue类
 class ArrayQueue {
@@ -78,12 +76,10 @@ class ArrayQueue {
     public boolean isFull() {
         return rear == maxSize - 1;
     }
-
     //判断队列是否为空
     public boolean isEmpty() {
         return rear == front;
     }
-
     //添加数据到队列
     public void addQueue(int n) {
         //判断队列是否满
@@ -94,7 +90,6 @@ class ArrayQueue {
         rear++;//让rear 后移
         arr[rear] = n;
     }
-
     //获取队列的数据，出队列
     public int getQueue() {
         //判断队列是否空
@@ -105,7 +100,6 @@ class ArrayQueue {
         front++;
         return arr[front];
     }
-
     //显示队列的所有数据
     public void showQueue() {
         //遍历
