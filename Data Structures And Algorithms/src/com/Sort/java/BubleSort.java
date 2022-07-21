@@ -1,4 +1,4 @@
-package com.Sort;
+package com.Sort.java;
 
 /**
  * @Name NumberTwoPlayer
