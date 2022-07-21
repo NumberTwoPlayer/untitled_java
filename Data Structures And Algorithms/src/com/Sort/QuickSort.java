@@ -1,8 +1,8 @@
-package com.QuickSort.java;
+package com.Sort;
 
 import java.util.Arrays;
 
-public class QuickSortTest{
+public class QuickSort {
     public static void main(String[] agrs){
         int[] arr = {1,12,32,98,0,-12,-79,0,10,0,1,90,12};
         quickSort(arr, 0, arr.length - 1);
