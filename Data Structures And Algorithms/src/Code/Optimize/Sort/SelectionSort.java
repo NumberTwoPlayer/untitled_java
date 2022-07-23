@@ -1,4 +1,4 @@
-package com.Sort;
+package Code.Optimize.Sort;
 
 /**
  * @Name NumberTwoPlayer

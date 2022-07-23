@@ -9,10 +9,10 @@ public class BubbleSort {
         if(arr == null || arr.length < 2){
             return;
         }
-        for(int i = arr.length - 1; i > 0; i--){
-            for(int j = 0; j < i; j++){
-                if(arr[j] > arr[j + 1]){
-                    swap(arr, j, j + 1);
+        for(int e = arr.length - 1; e > 0; e--){
+            for(int i = 0; i < e; i++){
+                if(arr[i] > arr[i + 1]){
+                    swap(arr, i, i + 1);
                 }
             }
         }
