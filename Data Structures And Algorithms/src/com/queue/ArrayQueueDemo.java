@@ -1,4 +1,4 @@
-package com.queue.java;
+package com.queue;
 import java.util.Scanner;
 
 /**

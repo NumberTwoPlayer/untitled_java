@@ -1,4 +1,4 @@
-package com.queue.java;
+package com.queue;
 
 /**
  * @Name NumberTwoPlayer

@@ -1,4 +1,4 @@
-package com.SparseArray.java;
+package com.SparseArray;
 
 /**
  * @Name NumberTwoPlayer
