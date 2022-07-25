@@ -15,14 +15,16 @@ package com.Multithreading.java;
  *      synchronized(同步监视器){
  *          需要被同步的代码
  *      }
- *      说明: 1、操作共享数据的代码，即为需要被同步的代码
+ *      说明: 1、操作共享数据的代码，即为需要被同步的代码 ---> 不能包含代码过多，也不能过少
  *            2、共享数据：多个线程共同操作的变量。比如：ticket就是共享数据
  *            3、同步监视器；俗称：锁。任何一个类的对象，都可以充当锁
  *            要求：多个线程必须要共用同一把锁
+ *
+ *            补充：在实现Runnable接口创建多线程的方式中，我们可以考虑使用this充当同步监视器
  *      方式二：同步方法
  *
  *      5、同步的方法，解决了线程的安全问题
- *
+ *      操作同步代码时，只能有一个线程参与，其他线程等待，相当于是一个单线程的过程，效率低
  *
  *
  * @Name NumberTwoPlayer
@@ -31,11 +33,11 @@ package com.Multithreading.java;
 class window1 implements Runnable {
 
     private int ticket = 100;
-    Object object = new Object();
+   // Object object = new Object();
 
     public void run() {
         while (true) {
-            synchronized (object) {
+           synchronized(this){//此时的this：唯一的window1的对象//方式二：synchronized (object) {
                 if (ticket > 0) {
 
                     try {
